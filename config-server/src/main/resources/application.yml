@@ -1,0 +1,23 @@
+server:
+  port: 8769
+spring:
+  application:
+    name: config-server
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: http://git.oschina.net/didispace/config-repo-demo/
+  cloud:
+      config:
+        server:
+          git:
+            uri: https://github.com/ling0113/springcloud_demo.git
+            username: lgr0113@126.com
+            password: ling5854531
+            search-paths: springcloud/config
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

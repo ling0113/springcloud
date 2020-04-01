@@ -1,0 +1,19 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: system
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://ling07.top:3306/test?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+    password: lgr123456
+    username: root
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+logging:
+    level:
+      root: info
+      com.system.dao: debug
