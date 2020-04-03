@@ -11,6 +11,7 @@
     <module>service-zuul</module>
     <module>system</module>
     <module>config-server</module>
+    <module>api-gateway</module>
 
   </modules>
   <parent>

@@ -1,8 +1,10 @@
 server:
-  port: 8771
+  #port: 8763
+  port: 8760
+
 spring:
   application:
-    name: api-gateway
+    name: service-hi
 
 eureka:
   client:
