@@ -10,4 +10,7 @@
     <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
     <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
   </resultMap>
+  <select id="selAll" resultType="com.system.entity.User">
+    select * from user
+  </select>
 </mapper>

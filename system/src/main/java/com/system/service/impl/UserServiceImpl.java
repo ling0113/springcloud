@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> selAll() {
-        List<User> users = userDao.selectAll();
+        List<User> users = userDao.selAll();
         return users;
     }
 }

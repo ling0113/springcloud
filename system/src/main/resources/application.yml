@@ -17,3 +17,6 @@ logging:
     level:
       root: info
       com.system.dao: debug
+mybatis:
+  mapper-locations: classpath:mybatis-mappers/*Dao.xml
+  type-aliases-package: com.system.entity
