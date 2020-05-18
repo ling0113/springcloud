@@ -17,5 +17,4 @@ public class RiTest {
     private String c;
 
 
-
 }

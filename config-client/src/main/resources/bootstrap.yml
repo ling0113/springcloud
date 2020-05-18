@@ -1,11 +1,11 @@
 spring:
   application:
     name: config-client
-#  cloud:
-#    config:
-#      uri: http://localhost:8769/
-#      profile: config-server-dev
-#      label: master
+  #  cloud:
+  #    config:
+  #      uri: http://localhost:8769/
+  #      profile: config-server-dev
+  #      label: master
   cloud:
     config:
       discovery:

@@ -10,5 +10,4 @@ public interface UserDao extends Mapper<User> {
     List<User> selAll();
 
 
-
 }

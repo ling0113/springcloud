@@ -13,11 +13,11 @@ public class HelloControler {
 
     @GetMapping(value = "/hi")
     public String hi(@RequestParam String name) {
-        return helloService.hiService( name );
+        return helloService.hiService(name);
     }
 
     @GetMapping(value = "/test")
     public String test() {
-        return helloService.hiTestService(new RiTest() );
+        return helloService.hiTestService(new RiTest());
     }
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.serviceoauth.dao.UserDao">
+  <resultMap id="BaseResultMap" type="com.serviceoauth.entity.User">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id"/>
+    <result column="username" jdbcType="VARCHAR" property="username"/>
+    <result column="password" jdbcType="VARCHAR" property="password"/>
+    <result column="enabled" jdbcType="TINYINT" property="enabled"/>
+    <result column="locked" jdbcType="TINYINT" property="locked"/>
+  </resultMap>
+  <select id="getUserRolesByUid" resultType="com.serviceoauth.entity.Role">
+    select * from role r,user_role ur where r.id=ur.rid and ur.uid=#{id}
+  </select>
+  <select id="selAll" resultType="com.serviceoauth.entity.User">
+    select * from user
+  </select>
+</mapper>

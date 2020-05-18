@@ -5,12 +5,12 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="user_name" jdbcType="VARCHAR" property="userName" />
-    <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
-    <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
+    <id column="id" jdbcType="INTEGER" property="id"/>
+    <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+    <result column="user_phone" jdbcType="VARCHAR" property="userPhone"/>
+    <result column="user_password" jdbcType="VARCHAR" property="userPassword"/>
   </resultMap>
-  <select id="selAll" resultType="com.system.entity.User">
+  <select id="selAll" resultMap="BaseResultMap">
     select * from user
   </select>
 </mapper>

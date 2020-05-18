@@ -18,8 +18,10 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class UserServiceImpl implements UserService {
+
     @Autowired
     private UserDao userDao;
+
     @Override
     public User selectUserByName(String userName) {
         /*User user = new User();
