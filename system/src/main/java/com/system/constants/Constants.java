@@ -1,4 +1,4 @@
-package com.system.config;
+package com.system.constants;
 
 import lombok.Getter;
 

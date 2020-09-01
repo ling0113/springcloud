@@ -4,6 +4,8 @@ server:
 eureka:
   instance:
     hostname: localhost
+    #跳转链接
+    status-page-url: http://${spring.cloud.client.ip-address}:${server.port}/swagger-ui.html#/
   client:
     registerWithEureka: false
     fetchRegistry: false

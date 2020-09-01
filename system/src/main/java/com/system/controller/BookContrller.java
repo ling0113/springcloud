@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import springfox.documentation.annotations.ApiIgnore;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @RestController
@@ -50,9 +49,9 @@ public class BookContrller {
         return "success";
     }
 
-    @ApiIgnore//使用该注解忽略这个API
+   // @ApiIgnore//使用该注解忽略这个API
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
     public String jsonTest() {
-        return " hi you!";
+        return " hi you aaaaa!";
     }
 }

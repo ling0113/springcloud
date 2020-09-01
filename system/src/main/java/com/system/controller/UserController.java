@@ -1,6 +1,6 @@
 package com.system.controller;
 
-import com.system.annotation.Log;
+import com.system.annotation.LogAop;
 import com.system.entity.User;
 import com.system.service.UserService;
 import java.util.HashMap;
@@ -54,7 +54,7 @@ public class UserController {
 
 
     @GetMapping("/sout")
-    @Log(value = "测试aop")
+    @LogAop(value = "测试aop")
     public List<User> home() {
         return userService.selAll();
     }

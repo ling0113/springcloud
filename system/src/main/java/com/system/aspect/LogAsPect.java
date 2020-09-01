@@ -1,6 +1,6 @@
 package com.system.aspect;
 
-import com.system.annotation.Log;
+import com.system.annotation.LogAop;
 import com.system.dao.SysLogDao;
 import com.system.entity.SysLog;
 import java.lang.reflect.Method;
@@ -28,17 +28,27 @@ import org.springframework.stereotype.Component;
  * @Version: 1.0
  */
 @Slf4j
-@Aspect
+@Aspect //代表切面
 @Component
 public class LogAsPect {
 //https://www.jianshu.com/p/c7d8e83ebf86
+    //joinpoint  连接点 可以被选择的 增强的方法点
+    //advisor    增强 (相当于通知)
+    //pointcut   切点  所有连接点的集合
+    //introduction 引入:添加方法或字段到被通知的类
+    //weaving    织入 将增强加入到目标类的过程
+    //           aop三种织入切面的方法:  第一种:编译时期织入,Aspectj
+    //                                 第二种:类装载时期织入 特殊的类装载器
+    //                                 第三种:动态代理织入 在运行期为目标类添加增强生成子类的方式
+
+
 
     @Autowired
     private SysLogDao sysLogDao;
     /**
      * 标识匹配带自定义注解的方法
      */
-    @Pointcut("@annotation(com.system.annotation.Log)")
+    @Pointcut("@annotation(com.system.annotation.LogAop)")
     public void pointcut() {}
 
     // 第一个*代表返回类型不限
@@ -110,7 +120,7 @@ public class LogAsPect {
         String args = Arrays.toString(point.getArgs());
         log.info("请求的方法参数值, {}",args);
         //获取注解描述
-        String value = method.getAnnotation(Log.class).value();
+        String value = method.getAnnotation(LogAop.class).value();
         log.info("获取注解描述, {}",value);
 
         SysLog sysLog = new SysLog();

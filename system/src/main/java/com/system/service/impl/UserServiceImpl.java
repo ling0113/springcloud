@@ -35,6 +35,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> selAll() {
         List<User> users = userDao.selAll();
+        User user = new User();
+        user.setId(2);
+        user.setUserName("1234444");
+        int i = userDao.updateByPrimaryKeySelective(user);
+        System.out.println(i);
         return users;
     }
 }

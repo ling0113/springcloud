@@ -1,6 +1,6 @@
 package com.system.config;
 
-import com.system.config.Constants.StatusCode;
+import com.system.constants.Constants.StatusCode;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import lombok.Data;

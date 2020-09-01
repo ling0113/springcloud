@@ -3,10 +3,15 @@ package com.system.entity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Id;
+import lombok.Data;
 
 @ApiModel(value = "com.system.entity.User")
+@Data
 public class User implements Serializable {
-
+    @Id
+    @Column(name = "`id`")
     @ApiModelProperty(value = "id")
     private Integer id;
 
@@ -21,59 +26,4 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     *
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    /**
-     * @return user_name
-     */
-    public String getUserName() {
-        return userName;
-    }
-
-    /**
-     *
-     */
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
-    }
-
-    /**
-     * @return user_phone
-     */
-    public String getUserPhone() {
-        return userPhone;
-    }
-
-    /**
-     *
-     */
-    public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone == null ? null : userPhone.trim();
-    }
-
-    /**
-     * @return user_password
-     */
-    public String getUserPassword() {
-        return userPassword;
-    }
-
-    /**
-     *
-     */
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword == null ? null : userPassword.trim();
-    }
 }
